@@ -12,15 +12,5 @@ object Main extends App {
     f.update(i, f(i - 2) + f(i - 1))
   }
   println(f(n))
-
-//  def solve(start: Int, n: Int): Int = {
-//    if (start == n) 1
-//    else if (n < start) 0
-//    else {
-//      val c1 = solve(start + 1, n)
-//      val c2 = solve(start + 2, n)
-//      c1 + c2
-//    }
-//  }
 }
 
