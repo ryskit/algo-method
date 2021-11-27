@@ -7,8 +7,9 @@ object Main extends App {
   t.update(0, 1)
 
   (1 to n).foreach { i =>
-    if (i - 1 >= 0) t.update(i, t(i - 1))
-    if (i - 2 >= 0) t.update(i, t(i - 2))
-    if (i - 3 >= 0) t.update(i, t(i - 3))
+    if (i - 1 >= 0) t.update(i, t(i) + t(i - 1))
+    if (i - 2 >= 0) t.update(i, t(i) + t(i - 2))
+    if (i - 3 >= 0) t.update(i, t(i) + t(i - 3))
   }
+  println(t(n))
 }
